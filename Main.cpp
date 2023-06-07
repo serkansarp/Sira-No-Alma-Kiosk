@@ -28,7 +28,7 @@ int main() {
 		cout << " TC kimlik ver: ";
 		cin >> tcKimlik;
 
-		// Girdinin hatalý olmasý durumu
+		// Girdinin int olmamasý kontrolü (Yoksa döngü sonsuza dönüyor)
 		if (cin.fail()) {
 			cout << " Lütfen girdinizi sadece rakamlarý kullanarak yapýn." << endl << endl;
 			cin.clear();
@@ -67,9 +67,13 @@ int main() {
 	
 	
 	
-	cout << "devam";
+	cout << "switch-case ile devamý geliþtirilecek";
 
-	//switch case
+	switch{
+	case:1{cout << "1"; break; }
+	case:2{cout << "2"; break; }
+	default:cout << "break";
+	}
 	
 	
 	
