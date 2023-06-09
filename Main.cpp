@@ -101,10 +101,6 @@ int main() {
 		} while (tcKimlikDogru != 1);
 	
 
-
-
-
-	
 		cout << endl << " 1. NÖROLOJÝ" << endl
 			<< " 2. KARDÝYOLOJÝ" << endl
 			<< " 3. ONKOLOJÝ" << endl << endl
