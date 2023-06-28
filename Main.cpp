@@ -7,19 +7,12 @@
 using namespace std;
 
 /*
-
 ///  Sýra No Alma Kiosk Simülasyonu   ///
-- 4 Aþamalý Tc Kimlik No Doðrulama
-- Sayý hanesi bulma (stoi dýþýnda)
-- Switch Case
-- Do-While Pratikleri
-- Makinenin Sürekli Çalýþmasý
-- TC Kimlik No'ya 4523 girildiðinde makinenin kapatýlmasý simülesi (ve notu)
-- Error anýnda makinenin kapatýlmasý simülesi
-- Kaðýt yazdýrýlýrken 1 saniye bekletilmesi simülesi
-- Kaðýt yazdýrýldýktan sonra 3,5 saniye görüntülenip döngü baþýna dönüþ
-
+1. 4 aþamalý kimlik no doðrulama sisteminin tamamýndan geçerek TC kimlik no doðrular.
+2. Doðrulandýðýnda size bir ascii sýra no kaðýdý yazdýrýr (3 ayrý bölüm için ayrý sayý aralýklarýndan rastgele sayý seçer)
+3. Sonsuz döngüdür, çýkýþ kodunu TC kimlik no istendiðinde girerseniz programdan çýkar.
 */
+
 
 void siraNoKagit(int,int,int,int,int,int,int);
 
@@ -55,11 +48,13 @@ int main() {
 	cout << "                              Çýkýþ kodu: "<<cikis<<"\n\n" << endl;
 	
 
-	for (;;) {
+	for (int i=0;i<9;i++) {
 
 		do {
 			cout << " Lütfen TC Kimlik Numaranýzý giriniz: ";
 			cin >> tcKimlik;
+
+			
 
 			// Girdinin int olmamasý kontrolü (Yoksa döngü sonsuza dönüyor)
 			if (cin.fail()) {
@@ -69,7 +64,6 @@ int main() {
 				tcKimlik = 0;
 				continue;
 			}
-		
 			// Digitleri yerine ekleme
 			digit01 = (tcKimlik / 10000000000) % 10;
 			digit02 = (tcKimlik / 1000000000) % 10;
@@ -96,7 +90,7 @@ int main() {
 				cout << endl << " Girdiðiniz TC Kimlik No hatalýdýr, lütfen kontrol ederek tekrar giriniz." << endl;
 			}
 			else {
-				tcKimlikDogru++;
+				tcKimlikDogru=1;
 			}
 		} while (tcKimlikDogru != 1);
 	
